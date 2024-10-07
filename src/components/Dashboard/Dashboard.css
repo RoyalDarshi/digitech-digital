@@ -1,0 +1,11 @@
+/* src/components/Dashboard/Dashboard.css */
+.title {
+    color: #0d47a1; /* Dark blue */
+    font-weight: bold;
+    margin-top: 20px; /* Add margin above title */
+}
+
+.description {
+    margin-top: 10px; /* Add margin above description */
+    color: #555; /* Gray for description */
+}

@@ -1,0 +1,306 @@
+/* Home.css */
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for the entire page */
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background: url('https://cloudinary.hbs.edu/hbsit/image/upload/s--jcW2HPqC--/f_auto,c_fill,h_375,w_750,/v20200101/EA99CC738B99D0AA67987EC2976D550F.jpg') no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px; /* Add some padding for responsiveness */
+}
+
+/* Dark overlay for the background image */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Control the darkness */
+    z-index: 1; /* Ensure overlay is behind text */
+}
+
+/* Hero content styling */
+.hero-content {
+    position: relative; /* Ensure it's above the overlay */
+    z-index: 2;
+    max-width: 1200px; /* Limit content width for larger screens */
+    width: 100%; /* Ensure responsiveness */
+}
+
+/* Hero title styling */
+.hero-title {
+    font-size: 3rem; /* Adjust title size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Add text shadow for better visibility */
+}
+
+/* Hero description styling */
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle text shadow for clarity */
+}
+
+/* Call-to-action buttons */
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cta-button,
+.cta-button-secondary {
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Primary button styling */
+.cta-button {
+    background-color: #ffd700;
+    color: #00274d;
+    border: none;
+}
+
+.cta-button:hover {
+    background-color: #ffa500;
+    color: white;
+}
+
+/* Secondary button (outline) styling */
+.cta-button-secondary {
+    background-color: transparent;
+    border: 2px solid #ffd700;
+    color: #ffd700;
+}
+
+.cta-button-secondary:hover {
+    background-color: #ffa500;
+    color: white;
+}
+
+/* Programs Section */
+.programs-section {
+    padding: 50px 20px;
+    background-color: #fff; /* White background for the section */
+}
+
+.programs-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00274d; /* Dark color for the title */
+}
+
+/* Program Cards */
+.programs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards */
+}
+
+.program-card {
+    background-color: #f4f4f4; /* Light background for cards */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Stronger shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s;
+    max-width: 300px; /* Limit card width */
+    flex: 1 0 300px; /* Flex properties for responsive layout */
+}
+
+.program-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.program-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #00274d; /* Dark color for card titles */
+}
+
+.program-card-description {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 50px 20px;
+    background-color: #e9ecef; /* Light gray background */
+}
+
+.testimonials-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00274d;
+}
+
+/* Testimonial Cards */
+.testimonials-container {
+    display: flex;
+    flex-direction: column; /* Stack testimonial cards vertically */
+    align-items: center; /* Center align the testimonials */
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    max-width: 400px; /* Limit testimonial card width */
+    text-align: center; /* Center text inside testimonial cards */
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.testimonial-content {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #555; /* Darker color for testimonial text */
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #00274d; /* Darker color for the author */
+}
+
+/* Footer Section */
+.footer {
+    background-color: #00274d; /* Dark footer background */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem; /* Smaller title size for smaller screens */
+    }
+
+    .hero-description {
+        font-size: 1rem; /* Smaller description font size */
+    }
+
+    .cta-button, .cta-button-secondary {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 1rem; /* Smaller font size */
+    }
+
+    .program-card, .testimonial-card {
+        margin: 10px; /* Smaller margins for cards */
+    }
+
+    .programs-title, .testimonials-title {
+        font-size: 2rem; /* Adjust section title size */
+    }
+}
+.testimonials-section {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.testimonials-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #343a40; /* Darker shade for headings */
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between testimonials */
+}
+
+.testimonial {
+    background-color: #fff; /* White background for testimonials */
+    border: 1px solid #ced4da; /* Light border */
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px; /* Fixed width for better layout */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.testimonial:hover {
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #495057; /* Medium gray for testimonial text */
+}
+
+.testimonial h3 {
+    margin-top: 15px;
+    color: #00274d; /* Primary color for names */
+}
+.free-demo-section {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.free-demo-content h2 {
+    font-size: 2.5rem;
+    color: #00274d;
+    margin-bottom: 20px;
+}
+
+.free-demo-content p {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.free-demo-btn {
+    background-color: #ffd700;
+    color: #00274d;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.free-demo-btn:hover {
+    background-color: #ffa500;
+    transform: scale(1.05);
+}

@@ -1,0 +1,7 @@
+/* src/styles/styles.css */
+body {
+    font-family: 'Roboto', sans-serif; /* Global font style */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for the app */
+}

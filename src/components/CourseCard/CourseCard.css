@@ -1,0 +1,31 @@
+/* src/components/CourseCard/CourseCard.css */
+.course-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.course-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.course-title {
+    color: #0d47a1; /* Dark blue */
+    font-weight: bold;
+}
+
+.course-description {
+    margin: 10px 0; /* Add margin above and below */
+}
+
+.btn-enroll {
+    background-color: #f57c00; /* Orange */
+    color: white;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enroll:hover {
+    background-color: #ef6c00; /* Darker orange on hover */
+}

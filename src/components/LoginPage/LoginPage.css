@@ -1,0 +1,14 @@
+/* src/components/LoginPage/LoginPage.css */
+.title {
+    color: #0d47a1; /* Dark blue */
+    font-weight: bold;
+    margin-top: 20px; /* Add margin above title */
+}
+
+/* Input styles */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    border-radius: 4px; /* Rounded borders */
+    background-color: #f9f9f9; /* Light background */
+}

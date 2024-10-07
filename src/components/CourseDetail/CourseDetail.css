@@ -1,0 +1,38 @@
+.course-detail-container {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.course-detail-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.course-detail-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.course-detail-description {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.course-detail-content {
+    text-align: left;
+}
+
+.course-detail-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.course-detail-content p {
+    font-size: 1.2rem;
+    color: #666;
+}
