@@ -28,9 +28,9 @@ const Contact = () => {
             <div className="contact-content">
                 <div className="contact-info">
                     <h3>Contact Details</h3>
-                    <p><strong>Address:</strong> 123 Digitech Street, Tech City, Country</p>
+                    <p><strong>Address:</strong>D9 ground floor,sector 3 noida,gautam buddha Nagar Noida</p>
                     <p><strong>Email:</strong> info@digitechdigital.com</p>
-                    <p><strong>Phone:</strong> +123 456 7890</p>
+                    <p><strong>Phone:</strong>9120692025</p>
                 </div>
                 <form className="contact-form" onSubmit={handleSubmit}>
                     <input

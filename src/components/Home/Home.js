@@ -5,19 +5,19 @@ import Demo from "../Demo/Demo"; // Import the CSS for styling
 const Home = () => {
     const testimonials = [
         {
-            name: "John Doe",
+            name: "Kapil Kumar",
             message: "Digitech Digital provided an excellent learning experience. The instructors were knowledgeable and supportive!",
         },
         {
-            name: "Jane Smith",
+            name: "Mohit Sharma",
             message: "The course content was comprehensive and easy to follow. I gained valuable skills for my career.",
         },
         {
-            name: "Michael Johnson",
+            name: "Nitish Raj",
             message: "I highly recommend Digitech Digital! The hands-on approach made all the difference in my learning.",
         },
         {
-            name: "Emily Davis",
+            name: "Rahul Yadav",
             message: "The community and networking opportunities were fantastic. I made great connections during my training.",
         },
     ];
