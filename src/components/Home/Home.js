@@ -42,7 +42,7 @@ const Home = () => {
                     </p>
                     <div className="cta-buttons">
                         <a href="#programs" className="cta-button">View Programs</a>
-                        <a href="#contact" className="cta-button-secondary">Contact Us</a>
+                        <a href="/contact" className="cta-button-secondary">Contact Us</a>
                     </div>
                 </div>
             </div>
