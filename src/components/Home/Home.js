@@ -91,13 +91,13 @@ const Home = () => {
                     {/* Testimonial Card 1 */}
                     <div className="testimonial-card">
                         <p className="testimonial-content">"The courses here changed my career path!"</p>
-                        <p className="testimonial-author">- Jane Doe</p>
+                        <p className="testimonial-author">- Deepak Rawat</p>
                     </div>
 
                     {/* Testimonial Card 2 */}
                     <div className="testimonial-card">
                         <p className="testimonial-content">"I learned so much and felt supported throughout!"</p>
-                        <p className="testimonial-author">- John Smith</p>
+                        <p className="testimonial-author">- Satish Bind</p>
                     </div>
                 </div>
             </div>
