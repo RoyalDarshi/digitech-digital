@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import './Home.css';
-import Demo from "../Demo/Demo"; // Import the CSS for styling
+import Demo from "../Demo/Demo";
+import NewsSection from "../NewsSection/NewsSection";
+import CoursesPage from "../../pages/CoursesPage";
+import Courses from "../Courses/Courses"; // Import the CSS for styling
 
 const Home = () => {
     const testimonials = [
@@ -46,7 +49,32 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
+            <NewsSection />
+            <div className="trusted-brand-section">
+                <div className="trusted-brand-content">
+                    <div className="trusted-brand-image">
+                        <img
+                            src="https://digiperform.com/wp-content/uploads/2022/02/bluef.png" // Replace with actual logo image URL
+                            alt="Digitech Digital Logo"
+                        />
+                    </div>
+                    <div className="trusted-brand-text">
+                        <h2>Asia's Most Trusted Brand</h2>
+                        <p>
+                            Digitech Digital has earned a reputation for being the leading brand in digital
+                            marketing and technology education, recognized across Asia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <section className="get-certified-section">
+                <h2>Get Certified</h2>
+                <div className="certified-content">
+                    <p>Become a certified expert in digital marketing and other skills by completing our
+                        industry-recognized courses.</p>
+                    <button className="certified-cta">Enroll Now</button>
+                </div>
+            </section>
             {/* Programs Section */}
             <div className="programs-section" id="programs">
                 <h2 className="programs-title">Our Programs</h2>
@@ -77,13 +105,14 @@ const Home = () => {
             <section className="free-demo-section">
                 <div className="free-demo-content">
                     <h2>Start with a Free Demo</h2>
-                    <p>Experience our platform and courses firsthand. Sign up for a free demo and discover how Digitech Digital can transform your skills.</p>
+                    <p>Experience our platform and courses firsthand. Sign up for a free demo and discover how Digitech
+                        Digital can transform your skills.</p>
                     <button className="free-demo-btn" onClick={openDemoModal}>Get Your Free Demo</button>
                 </div>
             </section>
 
             {/* Modal for Demo */}
-            <Demo isOpen={isDemoOpen} onClose={closeDemoModal} />
+            <Demo isOpen={isDemoOpen} onClose={closeDemoModal}/>
             {/* Testimonials Section */}
             <div className="testimonials-section">
                 <h2 className="testimonials-title">What Our Students Say</h2>
@@ -101,6 +130,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Courses />
             <section className="testimonials-section">
                 <h2>What Our Trainees Say</h2>
                 <div className="testimonials">
