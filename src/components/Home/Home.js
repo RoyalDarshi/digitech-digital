@@ -3,7 +3,8 @@ import './Home.css';
 import Demo from "../Demo/Demo";
 import NewsSection from "../NewsSection/NewsSection";
 import CoursesPage from "../../pages/CoursesPage";
-import Courses from "../Courses/Courses"; // Import the CSS for styling
+import Courses from "../Courses/Courses";
+import ProgramsSection from "../ProgramsSection/ProgramsSection"; // Import the CSS for styling
 
 const Home = () => {
     const testimonials = [
@@ -76,31 +77,7 @@ const Home = () => {
                 </div>
             </section>
             {/* Programs Section */}
-            <div className="programs-section" id="programs">
-                <h2 className="programs-title">Our Programs</h2>
-                <div className="programs-container">
-                    {/* Program Card 1 */}
-                    <div className="program-card">
-                        <h3 className="program-card-title">Digital Marketing</h3>
-                        <p className="program-card-description">Learn the art of digital marketing and grow your
-                            career.</p>
-                    </div>
-
-                    {/* Program Card 2 */}
-                    <div className="program-card">
-                        <h3 className="program-card-title">Data Science</h3>
-                        <p className="program-card-description">Dive into data and analytics for better business
-                            decisions.</p>
-                    </div>
-
-                    {/* Program Card 3 */}
-                    <div className="program-card">
-                        <h3 className="program-card-title">Web Development</h3>
-                        <p className="program-card-description">Build and maintain stunning websites and
-                            applications.</p>
-                    </div>
-                </div>
-            </div>
+            <ProgramsSection />
             {/* Free Demo Section */}
             <section className="free-demo-section">
                 <div className="free-demo-content">
@@ -130,7 +107,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <Courses />
+            {/*<Courses />*/}
             <section className="testimonials-section">
                 <h2>What Our Trainees Say</h2>
                 <div className="testimonials">

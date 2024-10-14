@@ -1,0 +1,78 @@
+/* Individual Program Card */
+.program-card {
+    width: 320px;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+}
+
+/* Shadow effect on the background image */
+.program-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: brightness(0.6); /* Darken the image */
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.program-card:hover::before {
+    filter: brightness(0.85);  /* Slightly brighten on hover */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* Move the category inside the top of the card */
+.program-card-category {
+    font-size: 14px;
+    background-color: #ff5722;  /* Darker semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 2; /* Ensure it stays above the image */
+}
+
+/* Card Content (below the category) */
+.program-card-content {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    color: #fff;
+    z-index: 3;  /* Content should be above the image shadow */
+}
+
+.program-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 5px;
+    font-family: 'Roboto', sans-serif;
+    color: #f0f0f0;
+}
+
+.program-card-link {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #ff5722;
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.program-card-link:hover {
+    color: #ff5722;
+    border-color: #fff;
+}
