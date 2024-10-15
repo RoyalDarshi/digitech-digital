@@ -1,0 +1,201 @@
+.courseContainer {
+    padding: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.courseHeader {
+    background-color: #1c1e21;
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+}
+
+.courseHeader h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.courseHeader p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.courseHighlights {
+    margin: 40px 0;
+}
+
+.courseHighlights h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.courseHighlights ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.courseHighlights ul li {
+    background-color: #f4f4f4;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 5px solid #ffeb3b;
+    font-size: 1rem;
+}
+
+.courseCurriculum {
+    margin: 40px 0;
+}
+
+.courseCurriculum h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.curriculumGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.module {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.module h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.studentReviews {
+    background-color: #f0f0f0;
+    padding: 30px;
+    margin: 40px 0;
+}
+
+.studentReviews h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.review {
+    margin-bottom: 20px;
+}
+
+.review p {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.review h4 {
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.careerSupport {
+    background-color: #e0e0e0;
+    padding: 30px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.careerSupport h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.courseFaqs {
+    margin: 40px 0;
+}
+
+.courseFaqs h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.faq {
+    margin-bottom: 20px;
+}
+
+.faq h4 {
+    font-size: 1.1rem;
+}
+
+.courseEnroll {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.enrollBtn {
+    background-color: #ff5722;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.enrollBtn:hover {
+    background-color: #e64a19;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .courseContainer {
+        padding: 20px;
+    }
+
+    .courseHeader h1 {
+        font-size: 1.8rem;
+    }
+
+    .courseHeader p {
+        font-size: 0.9rem;
+    }
+
+    .courseHighlights h2,
+    .courseCurriculum h2,
+    .studentReviews h2,
+    .careerSupport h2,
+    .courseFaqs h2 {
+        font-size: 1.6rem;
+    }
+
+    .courseHighlights ul li,
+    .module h3 {
+        font-size: 0.95rem;
+    }
+
+    .curriculumGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .module {
+        padding: 15px;
+    }
+
+    .studentReviews {
+        padding: 20px;
+    }
+
+    .careerSupport,
+    .courseEnroll {
+        padding: 20px;
+    }
+
+    .review p {
+        font-size: 0.95rem;
+    }
+
+    .faq h4 {
+        font-size: 1rem;
+    }
+
+    .enrollBtn {
+        width: 100%;
+        padding: 15px 0;
+    }
+}

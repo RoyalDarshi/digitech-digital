@@ -10,6 +10,16 @@ import Footer from './components/Footer/Footer';
 import PayFee from './components/PayFee/PayFee';
 import Navbar from "./components/Navbar/Navbar";
 import CourseDetail from "./components/CourseDetail/CourseDetail";
+import MasterProgram from "./components/MasterProgram/MasterProgram";
+import AnnualProgram from "./components/AnnualProgram/AnnualProgram";
+import AdvancedCourse from "./components/AdvancedCourse/AdvancedCourse";
+import MasterCourse from "./components/MasterCourse/MasterCourse";
+import FoundationCourse from "./components/FoundationCourse/FoundationCourse";
+import DigitalMarketingSpecialistCourse from "./components/DigitalMarketingSpecialistCourse/DigitalMarketingSpecialistCourse";
+import DigitalMarketingMasterCourse from "./components/DigitalMarketingMasterCourse/DigitalMarketingMasterCourse";
+import AdvancedDigitalMarketingCourse from "./components/AdvancedDigitalMarketingCourse/AdvancedDigitalMarketingCourse";
+import AnnualDigitalMarketingProgram from "./components/AnnualDigitalMarketingProgram/AnnualDigitalMarketingProgram";
+import NinjaKids from "./components/NinjaKids/NinjaKids";
 
 function App() {
     return (
@@ -22,6 +32,16 @@ function App() {
                     <Route path="/courses" element={<Courses />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/payfee" element={<PayFee />} />
+                    <Route path={"/master-program"} element={<MasterProgram />} />
+                    <Route path={"/annual-program"} element={<AnnualProgram />} />
+                    <Route path={"/advanced-course"} element={<AdvancedCourse />} />
+                    <Route path={"/foundation-course"} element={<FoundationCourse />} />
+                    <Route path={"/special-course"} element={<DigitalMarketingSpecialistCourse />} />
+                    <Route path={"/digital-master-course"} element={<DigitalMarketingMasterCourse />} />
+                    <Route path={"/digital-advance-course"} element={<AdvancedDigitalMarketingCourse />} />
+                    <Route path={"/annual-digital-course"} element={<AnnualDigitalMarketingProgram />} />
+                    <Route path={"/ninja-kids"} element={<NinjaKids />} />
+                    <Route path={"/master-course"} element={<MasterCourse />} />
                     <Route path="/course/:courseId" element={<CourseDetail />} />
                 </Routes>
                 <Footer />

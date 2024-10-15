@@ -5,21 +5,25 @@ import './Navbar.css';
 
 
 const Dropdown = ({ title, items }) => {
-    const [isOpen, setIsOpen] = useState(true);
-    const [isLuckOpen, setIsLuckOpen] = useState(false);
-    const openLuck=(state)=>{
-        if(state.label==='Lucknow ▼'||state.label==='Bangalore ▼'){
-            setIsLuckOpen(true)
-        }else{
-            setIsLuckOpen(false)
-        }
-    }
+    const [isOpen, setIsOpen] = useState(false);
+    const [openSubMenu, setOpenSubMenu] = useState(null); // Track open submenu
+
+    const handleMouseEnter = (index) => {
+        setOpenSubMenu(index); // Open submenu based on hovered item
+    };
+
+    const handleMouseLeave = () => {
+        setOpenSubMenu(null); // Close submenu when mouse leaves
+    };
 
     return (
         <div
             className="dropdown-wrapper"
             onMouseEnter={() => setIsOpen(true)}
-            onMouseLeave={() => setIsOpen(false)}
+            onMouseLeave={() => {
+                setIsOpen(false);
+                setOpenSubMenu(null); // Close everything when mouse leaves dropdown
+            }}
         >
             <button className="nav-link" aria-haspopup="true" aria-expanded={isOpen}>
                 {title}
@@ -27,18 +31,32 @@ const Dropdown = ({ title, items }) => {
             {isOpen && (
                 <div className="dropdown-menu">
                     {items.map((item, index) => (
-                        <div key={index} className="dropdown-item-wrapper">
-                            <Link to={item.path} className="dropdown-item">{item.label}</Link>
-                            {item.subItems && item.subItems.length > 0 && (
+                        <div
+                            key={index}
+                            className="dropdown-item-wrapper"
+                            onMouseEnter={() => handleMouseEnter(index)}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <Link to={item.path} className="dropdown-item">
+                                {item.label}
+                            </Link>
+                            {item.subItems && openSubMenu === index && (
                                 <div className="inner-dropdown">
                                     {item.subItems.map((subItem, subIndex) => (
-                                        <div onMouseEnter={() => openLuck(subItem)}
-                                             onMouseLeave={() => setIsLuckOpen(false)} className="dropdown-item-wrapper" key={subIndex}>
-                                            <Link to={subItem.path} className="inner-dropdown-item">{subItem.label}</Link>
-                                            {subItem.subItems && subItem.subItems.length > 0 && isLuckOpen&&(
-                                                <div className="inner-dropdown">
+                                        <div key={subIndex} className="inner-dropdown-item-wrapper">
+                                            <Link to={subItem.path} className="inner-dropdown-item">
+                                                {subItem.label}
+                                            </Link>
+                                            {subItem.subItems && (
+                                                <div className="inner-inner-dropdown">
                                                     {subItem.subItems.map((innerItem, innerIndex) => (
-                                                        <Link key={innerIndex} to={innerItem.path} className="inner-dropdown-item">{innerItem.label}</Link>
+                                                        <Link
+                                                            key={innerIndex}
+                                                            to={innerItem.path}
+                                                            className="inner-dropdown-item"
+                                                        >
+                                                            {innerItem.label}
+                                                        </Link>
                                                     ))}
                                                 </div>
                                             )}
@@ -56,11 +74,12 @@ const Dropdown = ({ title, items }) => {
 
 
 
+
 const Navbar = () => {
     const location = useLocation();
 
     const aboutItems = [
-        { path: '/who-we-are', label: 'Who We Are' },
+        { path: '/about', label: 'Who We Are' },
         { path: '/podcast', label: 'Podcast' },
         { path: '/videos', label: 'Videos' },
         { path: '/trainee-reviews', label: 'Trainee Reviews' },
@@ -75,19 +94,19 @@ const Navbar = () => {
             label: 'Digital Marketing ▼',
             path: '/courses/digital-marketing',
             subItems: [
-                { path: '/courses/digital-marketing/advanced', label: 'Foundation Course (2 Month)' },
-                { path: '/courses/digital-marketing/advanced', label: 'Specialist Course (3 Months+)' },
-                { path: '/courses/digital-marketing/advanced', label: 'Master Course (4.5 Months+)' },
-                { path: '/courses/digital-marketing/advanced', label: 'Professional Course (6 Months)' },
-                { path: '/courses/digital-marketing/advanced', label: 'Digi Hero (1 Year)' },
-                { path: '/courses/digital-marketing/advanced', label: 'Digital Ninja (Kids)' },
+                { path: '/foundation-course', label: 'Foundation Course (2 Month)' },
+                { path: '/special-course', label: 'Specialist Course (3 Months+)' },
+                { path: '/digital-master-course', label: 'Master Course (4.5 Months+)' },
+                { path: '/digital-advance-course', label: 'Professional Course (6 Months)' },
+                { path: '/annual-digital-course', label: 'Digi Hero (1 Year)' },
+                { path: '/ninja-kids', label: 'Digital Ninja (Kids)' },
             ],
         },
         {
             label: 'Data Science ▼',
-            path: '/courses/data-science',
+            path: '/master-program',
             subItems: [
-                { path: '/courses/data-science/machine-learning', label: 'Master Program in Data Science' },
+                { path: '/master-program', label: 'Master Program in Data Science' },
             ],
         },
     ];
@@ -175,9 +194,9 @@ const Navbar = () => {
     ];
 
     const contactItems = [
-        { path: '/contact/faq', label: 'Contact Us' },
+        { path: '/contact', label: 'Contact Us' },
         { path: '/contact/support', label: 'Franchise' },
-        { path: '/contact/feedback', label: 'Pay Course Fee' },
+        { path: '/payfee', label: 'Pay Course Fee' },
         { path: '/contact/faq', label: 'Terms and Conditions' },
         { path: '/contact/faq', label: 'Privacy Policy' },
         { path: '/contact/faq', label: 'Refund and Cancellation Policy' },

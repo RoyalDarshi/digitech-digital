@@ -1,0 +1,229 @@
+.masterProgramContainer {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section */
+.heroSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f5f5f5;
+}
+
+.heroContent {
+    max-width: 600px;
+}
+
+.heroContent h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.heroContent p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.enrollButton {
+    padding: 12px 24px;
+    background-color: #ff6200;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.enrollButton:hover {
+    background-color: #e55a00;
+}
+
+.heroImage img {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Program Overview */
+.programOverview {
+    padding: 60px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.programOverview h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.programOverview p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Key Highlights Section */
+.keyHighlights {
+    padding: 60px;
+    background-color: #f5f5f5;
+}
+
+.keyHighlights h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.highlightsContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Adjusts items for small screens */
+}
+
+.highlightCard {
+    text-align: center;
+    max-width: 250px;
+    margin-bottom: 20px; /* Added margin for spacing on smaller screens */
+}
+
+.highlightCard img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+/* Curriculum Section */
+.curriculumSection {
+    padding: 60px;
+    background-color: #fff;
+}
+
+.curriculumSection h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.curriculumSection ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+}
+
+.curriculumSection ul li {
+    margin-bottom: 15px;
+}
+
+/* Testimonials Section */
+.testimonialsSection {
+    padding: 60px;
+    background-color: #f5f5f5;
+}
+
+.testimonialsSection h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.testimonial {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.testimonial p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.testimonial h4 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* Call-to-Action Section */
+.ctaSection {
+    padding: 60px;
+    text-align: center;
+    background-color: #ff6200;
+    color: #fff;
+}
+
+.ctaSection h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.ctaButton {
+    padding: 12px 24px;
+    background-color: #fff;
+    color: #ff6200;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.ctaButton:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .heroSection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .heroContent h1 {
+        font-size: 32px;
+    }
+
+    .heroContent p {
+        font-size: 16px;
+    }
+
+    .heroImage img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .keyHighlights h2 {
+        font-size: 28px;
+    }
+
+    .highlightCard {
+        max-width: 100%;
+    }
+
+    .curriculumSection h2,
+    .programOverview h2,
+    .testimonialsSection h2,
+    .ctaSection h2 {
+        font-size: 28px;
+    }
+
+    .programOverview p,
+    .curriculumSection ul li,
+    .testimonial p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroContent h1 {
+        font-size: 24px;
+    }
+
+    .heroContent p,
+    .programOverview p,
+    .curriculumSection ul li,
+    .testimonial p {
+        font-size: 14px;
+    }
+
+    .enrollButton {
+        width: 100%;
+    }
+
+    .ctaButton {
+        width: 100%;
+    }
+}

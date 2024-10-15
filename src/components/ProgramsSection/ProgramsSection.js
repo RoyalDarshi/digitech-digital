@@ -16,28 +16,28 @@ const ProgramsSection = () => {
             <div className="programs-container">
                 <ProgramCard
                     category="Data Science"
-                    index={"advanced-digital-marketing"}
+                    index={"master-program"}
                     title="Data Science, AI & ML"
                     description="Learn to harness data for business and technological advancements."
                     backgroundImage="https://digiperform.com/wp-content/uploads/2023/05/machine-learning-hand-robot-touching-computer-chip-binary-data-1.jpg"
                 />
                 <ProgramCard
                     category="Annual Program"
-                    index={"seo-course"}
+                    index={"annual-program"}
                     title="Annual DigiHero Program"
                     description="Master the art of digital marketing with our comprehensive annual program."
                     backgroundImage="https://digiperform.com/wp-content/uploads/2022/02/maxresdefault.jpg"
                 />
                 <ProgramCard
                     category="Digital Marketing"
-                    index={"social-media-marketing"}
+                    index={"advanced-course"}
                     title="Online Marketing Professional"
                     description="Become a certified online marketing expert with real-world experience."
                     backgroundImage="https://digiperform.com/wp-content/uploads/2022/02/Indian-student-1.jpg"
                 />
                 <ProgramCard
                     category="Digital Marketing"
-                    index={"web-development-training"}
+                    index={"master-course"}
                     title="Online Marketing Practitioner"
                     description="Advance your skills in online marketing with practical learning."
                     backgroundImage="https://digiperform.com/wp-content/uploads/2022/02/banner-img.jpg"

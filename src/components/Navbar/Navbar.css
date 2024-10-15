@@ -21,7 +21,7 @@
     color: #ffd700; /* Gold */
     font-size: 1.2rem;
     margin: 0 15px;
-    padding: 10px 10px;
+    padding: 10px;
     text-decoration: none;
     border: none;
     background-color: transparent;
@@ -66,74 +66,93 @@
     outline: none;
 }
 
+/* General Dropdown Styles */
 .dropdown-wrapper {
     position: relative;
 }
 
 .dropdown-menu {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background-color: #003366;
     padding: 10px 0;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    z-index: 100;
-    white-space: nowrap;
-    transition: opacity 0.2s ease;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.dropdown-wrapper:hover .dropdown-menu {
-    display: block;
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.dropdown-item-wrapper {
-    position: relative;
-}
-
-.dropdown-item {
-    color: #ffd700;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s ease;
-}
-
-.dropdown-item:hover {
-    background-color: rgba(255, 215, 0, 0.2);
+    z-index: 10;
+    min-width: 200px; /* Adjust as needed */
 }
 
 .inner-dropdown {
     position: absolute;
     top: 0;
-    left: 100%;
+    left: 100%; /* This moves the inner dropdown to the right side of the parent item */
     background-color: #003366;
     padding: 10px 0;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    z-index: 100;
+    min-width: 200px;
+    z-index: 11;
     white-space: nowrap;
-    display: none; /* Ensure it's hidden by default */
 }
 
-.dropdown-item-wrapper:hover .inner-dropdown {
-    display: block; /* Show only on hover of the parent item */
+.inner-inner-dropdown {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Align the inner-inner dropdown parallel to its parent submenu */
+    background-color: #003366;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 12;
+    white-space: nowrap;
 }
 
-
+/* Dropdown Item Styles */
+.dropdown-item,
 .inner-dropdown-item {
-    color: #ffd700;
     padding: 10px 20px;
+    color: #ffd700;
     text-decoration: none;
     display: block;
-    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
+.dropdown-item:hover,
 .inner-dropdown-item:hover {
     background-color: rgba(255, 215, 0, 0.2);
+}
+
+/* To avoid flickering between transitions */
+.dropdown-item-wrapper {
+    position: relative;
+}
+
+.inner-dropdown-item-wrapper {
+    position: relative;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .search-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .pay-button {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
