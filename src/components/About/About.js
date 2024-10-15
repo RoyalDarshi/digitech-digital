@@ -4,20 +4,20 @@ import heroImg from "../../assets/heroImg.webp"
 import jobAss from "../../assets/jobAssistance.png"
 import digiMarkrt from "../../assets/digiMarket.png"
 
-const AboutDigiperform = () => {
+const About = () => {
     return (
         <div className={styles['about-container']}>
             {/* Hero Section */}
             <section className={styles['hero-section']}>
                 <div className={styles['hero-content']}>
-                    <h1>About Digiperform</h1>
+                    <h1>About Digitech Digital</h1>
                     <p>
-                        Digiperform is the leading digital marketing training company in India, providing
+                        Digitech Digital is the leading digital marketing training company in India, providing
                         excellent opportunities for individuals and businesses to advance in the digital world.
                     </p>
                 </div>
                 <div className={styles['hero-image']}>
-                    {/*<img src={heroImg} alt="About Digiperform" />*/}
+                    {/*<img src={heroImg} alt="About Digitech Digital" />*/}
                 </div>
             </section>
 
@@ -41,7 +41,7 @@ const AboutDigiperform = () => {
 
             {/* Highlights Section */}
             <section className={styles['highlights-section']}>
-                <h2>Why Digiperform?</h2>
+                <h2>Why Digitech Digital?</h2>
                 <div className={styles['highlights-container']}>
                     <div className={styles.highlight}>
                         <img src={heroImg} alt="Industry Recognized" />
@@ -69,7 +69,7 @@ const AboutDigiperform = () => {
                         width="560"
                         height="315"
                         src="https://www.youtube.com/embed/video-id"
-                        title="Digiperform Video"
+                        title="Digitech Digital Video"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
@@ -82,12 +82,12 @@ const AboutDigiperform = () => {
                 <h2>What Our Students Say</h2>
                 <div className={styles['testimonials-container']}>
                     <div className={styles.testimonial}>
-                        <p>"Digiperform's training helped me kickstart my digital marketing career."</p>
-                        <h4>- Student Name</h4>
+                        <p>"Digitech Digital's training helped me kickstart my digital marketing career."</p>
+                        <h4>Rohit Kumar</h4>
                     </div>
                     <div className={styles.testimonial}>
                         <p>"The practical approach made all the difference in my learning."</p>
-                        <h4>- Student Name</h4>
+                        <h4>Preety Kumari</h4>
                     </div>
                 </div>
             </section>
@@ -95,11 +95,11 @@ const AboutDigiperform = () => {
             {/* Footer Call-to-Action */}
             <section className={styles['cta-section']}>
                 <h2>Join the Digital Revolution</h2>
-                <p>Take the next step in your career with Digiperform's industry-leading courses.</p>
+                <p>Take the next step in your career with Digitech Digital's industry-leading courses.</p>
                 <button className={styles['cta-button']}>Get Started</button>
             </section>
         </div>
     );
 };
 
-export default AboutDigiperform;
+export default About;

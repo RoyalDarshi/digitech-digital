@@ -4,9 +4,12 @@ import Demo from "../Demo/Demo";
 import NewsSection from "../NewsSection/NewsSection";
 import CoursesPage from "../../pages/CoursesPage";
 import Courses from "../Courses/Courses";
-import ProgramsSection from "../ProgramsSection/ProgramsSection"; // Import the CSS for styling
+import ProgramsSection from "../ProgramsSection/ProgramsSection";
+import EnrollNowModal from "../EnrollNow/EnrollNow";
+import styles from "../AdvancedDigitalMarketingCourse/AdvancedDigitalMarketingCourse.module.css"; // Import the CSS for styling
 
 const Home = () => {
+    const [isModalOpen, setModalOpen] = useState(false);
     const testimonials = [
         {
             name: "Kapil Kumar",
@@ -73,11 +76,13 @@ const Home = () => {
                 <div className="certified-content">
                     <p>Become a certified expert in digital marketing and other skills by completing our
                         industry-recognized courses.</p>
-                    <button className="certified-cta">Enroll Now</button>
+                    <button onClick={() => setModalOpen(true)} className={"certified-cta"}>Enroll Now</button>
+                    <EnrollNowModal isOpen={isModalOpen} onClose={() => setModalOpen(false)}
+                                    course={""}/>
                 </div>
             </section>
             {/* Programs Section */}
-            <ProgramsSection />
+            <div id={"programs"}><ProgramsSection /></div>
             {/* Free Demo Section */}
             <section className="free-demo-section">
                 <div className="free-demo-content">

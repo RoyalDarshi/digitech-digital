@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './FoundationCourse.module.css';
+import EnrollNowModal from "../EnrollNow/EnrollNow";
+import digiMarket from "../../assets/digitalMkt.png"
 
 const FoundationCourse = () => {
+    const [isModalOpen, setModalOpen] = useState(false);
     return (
         <div className={styles.courseContainer}>
             {/* Hero Section */}
@@ -12,10 +15,11 @@ const FoundationCourse = () => {
                         Kickstart your digital marketing journey with our foundation course, designed to help you
                         learn the basics of digital marketing, including SEO, social media, and more.
                     </p>
-                    <button className={styles.enrollButton}>Enroll Now</button>
+                    <button onClick={() => setModalOpen(true)} className={styles.enrollButton}>Enroll Now</button>
+                    <EnrollNowModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} course={"Digital Marketing Foundation Course"} />
                 </div>
                 <div className={styles.heroImage}>
-                    <img src="https://digiperform.com/wp-content/uploads/2022/03/963.png" alt="Digital Marketing Foundation Course" />
+                    <img src={digiMarket} alt="Digital Marketing Foundation Course" />
                 </div>
             </section>
 

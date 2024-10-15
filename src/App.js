@@ -20,6 +20,7 @@ import DigitalMarketingMasterCourse from "./components/DigitalMarketingMasterCou
 import AdvancedDigitalMarketingCourse from "./components/AdvancedDigitalMarketingCourse/AdvancedDigitalMarketingCourse";
 import AnnualDigitalMarketingProgram from "./components/AnnualDigitalMarketingProgram/AnnualDigitalMarketingProgram";
 import NinjaKids from "./components/NinjaKids/NinjaKids";
+import EnrollNow from "./components/EnrollNow/EnrollNow";
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                     <Route path="/courses" element={<Courses />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/payfee" element={<PayFee />} />
+                    <Route path={"/enroll-now"} element={<EnrollNow />} />
                     <Route path={"/master-program"} element={<MasterProgram />} />
                     <Route path={"/annual-program"} element={<AnnualProgram />} />
                     <Route path={"/advanced-course"} element={<AdvancedCourse />} />

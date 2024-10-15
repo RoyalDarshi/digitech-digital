@@ -23,21 +23,21 @@ const ProgramsSection = () => {
                 />
                 <ProgramCard
                     category="Annual Program"
-                    index={"annual-program"}
+                    index={"annual-digital-course"}
                     title="Annual DigiHero Program"
                     description="Master the art of digital marketing with our comprehensive annual program."
                     backgroundImage="https://digiperform.com/wp-content/uploads/2022/02/maxresdefault.jpg"
                 />
                 <ProgramCard
                     category="Digital Marketing"
-                    index={"advanced-course"}
+                    index={"digital-advance-course"}
                     title="Online Marketing Professional"
                     description="Become a certified online marketing expert with real-world experience."
                     backgroundImage="https://digiperform.com/wp-content/uploads/2022/02/Indian-student-1.jpg"
                 />
                 <ProgramCard
                     category="Digital Marketing"
-                    index={"master-course"}
+                    index={"digital-master-course"}
                     title="Online Marketing Practitioner"
                     description="Advance your skills in online marketing with practical learning."
                     backgroundImage="https://digiperform.com/wp-content/uploads/2022/02/banner-img.jpg"

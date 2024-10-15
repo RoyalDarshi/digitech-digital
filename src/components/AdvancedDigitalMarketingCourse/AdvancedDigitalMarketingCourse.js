@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './AdvancedDigitalMarketingCourse.module.css';
+import EnrollNowModal from "../EnrollNow/EnrollNow";
 
 const AdvancedDigitalMarketingCourse = () => {
+    const [isModalOpen, setModalOpen] = useState(false);
     return (
         <div className={styles.container}>
             <header className={styles.header}>
@@ -75,7 +77,9 @@ const AdvancedDigitalMarketingCourse = () => {
             <section className={styles.enrollment}>
                 <h2>Enroll Now!</h2>
                 <p>Take your digital marketing skills to new heights. Click below to enroll in the Advanced Digital Marketing Course!</p>
-                <button className={styles.enrollButton}>Enroll Now</button>
+                <button onClick={() => setModalOpen(true)} className={styles.enrollButton}>Enroll Now</button>
+                <EnrollNowModal isOpen={isModalOpen} onClose={() => setModalOpen(false)}
+                                course={"Advanced Digital Marketing Course"}/>
             </section>
         </div>
     );

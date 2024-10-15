@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './MasterProgram.module.css';
+import EnrollNowModal from "../EnrollNow/EnrollNow";
+import aiMl from "../../assets/ai-ml.png"
 
 const MasterProgram = () => {
+    const [isModalOpen, setModalOpen] = useState(false);
     return (
         <div className={styles.masterProgramContainer}>
             {/* Hero Section */}
@@ -9,10 +12,10 @@ const MasterProgram = () => {
                 <div className={styles.heroContent}>
                     <h1>Master Program in AI, ML & Analytics</h1>
                     <p>Join the revolution and become a certified expert in AI, Machine Learning, and Data Analytics.</p>
-                    <button className={styles.enrollButton}>Enroll Now</button>
+                    <button onClick={()=>setModalOpen(true)} className={styles.enrollButton}>Enroll Now</button>
                 </div>
                 <div className={styles.heroImage}>
-                    <img src="https://digiperform.com/wp-content/uploads/2022/03/963.png" alt="AI, ML, and Analytics" />
+                    <img src={aiMl} alt="AI, ML, and Analytics" />
                 </div>
             </section>
 
@@ -76,9 +79,11 @@ const MasterProgram = () => {
             <section className={styles.ctaSection}>
                 <h2>Get Started Today</h2>
                 <p>Take the leap and become a certified AI and ML expert with Digiperform.</p>
-                <button className={styles.ctaButton}>Enroll Now</button>
+                <button onClick={() => setModalOpen(true)} className={styles.ctaButton}>Enroll Now</button>
             </section>
+            <EnrollNowModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} course={"Digital Marketing Master Course "} />
         </div>
+
     );
 };
 

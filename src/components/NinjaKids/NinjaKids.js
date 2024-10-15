@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './NinjaKids.module.css';
+import EnrollNowModal from "../EnrollNow/EnrollNow";
 
 const NinjaKids = () => {
+    const [isModalOpen, setModalOpen] = useState(false);
     return (
         <div className={styles.container}>
             <header className={styles.header}>
@@ -62,8 +64,11 @@ const NinjaKids = () => {
 
             <section className={styles.enrollment}>
                 <h2>Enroll Now!</h2>
-                <p>Don’t miss out on this exciting opportunity for your kids to learn digital marketing. Click below to enroll in the Ninja Kids Digital Marketing Program!</p>
-                <button className={styles.enrollButton}>Enroll Now</button>
+                <p>Don’t miss out on this exciting opportunity for your kids to learn digital marketing. Click below to
+                    enroll in the Ninja Kids Digital Marketing Program!</p>
+                <button onClick={() => setModalOpen(true)} className={styles.enrollButton}>Enroll Now</button>
+                <EnrollNowModal isOpen={isModalOpen} onClose={() => setModalOpen(false)}
+                                course={"Ninja Kids"}/>
             </section>
         </div>
     );
