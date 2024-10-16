@@ -1,0 +1,164 @@
+.placementPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+}
+
+.placementHeader {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.placementTitle {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.placementIntro {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.placementSection {
+    width: 100%;
+    max-width: 800px; /* Restricts width on larger screens */
+    margin-bottom: 40px;
+}
+
+.placementSectionTitle {
+    font-size: 2rem;
+    color: #007bff; /* Primary color for titles */
+    margin-bottom: 20px;
+}
+
+.placementList {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+}
+
+.placementList li {
+    font-size: 1.1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.placementList li:hover {
+    background-color: #e7f0ff; /* Light blue on hover */
+}
+
+.statCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.statCard:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.statNumber {
+    font-size: 2.5rem;
+    color: #007bff; /* Primary color for numbers */
+    margin: 0;
+}
+
+.statLabel {
+    font-size: 1rem;
+    color: #666;
+}
+
+.testimonial {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.testimonial:hover {
+    background-color: #e7f0ff; /* Light blue on hover */
+}
+
+.testimonialText {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.testimonialAuthor {
+    font-size: 0.9rem;
+    color: #777;
+    text-align: right;
+}
+
+.subscribeSection {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.subscribeTitle {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.subscribeButton {
+    background-color: #007bff; /* Primary color for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribeButton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .placementTitle {
+        font-size: 2rem;
+    }
+
+    .placementIntro {
+        font-size: 1rem;
+    }
+
+    .placementSectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .placementList li {
+        font-size: 1rem;
+    }
+
+    .statNumber {
+        font-size: 2rem;
+    }
+
+    .subscribeTitle {
+        font-size: 1.5rem;
+    }
+
+    .subscribeButton {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,167 @@
+/* Podcast.module.css */
+.podcastPage {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.podcastHeader {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.podcastBanner {
+    background-color: #0033cc; /* Primary color */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.podcastTitle {
+    font-size: 2.5rem;
+}
+
+.podcastIntro {
+    font-size: 1.2rem;
+}
+
+.podcastEpisodes {
+    margin-top: 20px;
+}
+
+.episodeSectionTitle {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.5rem; /* Added font size for clarity */
+}
+
+.podcastList {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap */
+    justify-content: space-between; /* Spacing between cards */
+}
+
+.podcastCard {
+    background-color: white; /* Card background */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Margin around cards */
+    width: calc(25% - 20px); /* Width calculation for responsive design */
+    transition: transform 0.3s;
+}
+
+.podcastCard:hover {
+    transform: translateY(-5px);
+}
+
+.podcastImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0; /* Round top corners */
+}
+
+.podcastEpisodeTitle {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.podcastEpisodeDescription {
+    margin: 10px 0;
+    color: #555; /* Adjusted color for readability */
+    padding: 0 10px; /* Padding for better text alignment */
+}
+
+.playButton {
+    background-color: #0033cc; /* Primary color */
+    color: white;
+    border: none; /* Ensured button has no border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for better button size */
+    cursor: pointer; /* Added cursor pointer for better UX */
+    margin: 10px; /* Margin for spacing */
+}
+
+.loadMoreButton {
+    margin-top: 20px;
+    background-color: #ff4081; /* Accent color */
+    color: white;
+    border: none; /* Ensured button has no border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for better button size */
+}
+
+.subscribeSection {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.subscribeTitle {
+    font-size: 2rem;
+}
+
+.subscribeText {
+    margin: 10px 0;
+}
+
+.subscribeButton {
+    margin-top: 10px;
+    background-color: #0033cc; /* Primary color */
+    color: white;
+    border: none; /* Ensured button has no border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for better button size */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .podcastTitle {
+        font-size: 2rem; /* Smaller title on mobile */
+    }
+
+    .podcastIntro {
+        font-size: 1rem; /* Smaller subtitle on mobile */
+    }
+
+    .podcastList {
+        justify-content: center; /* Center items on small screens */
+    }
+
+    .podcastCard {
+        width: calc(50% - 20px); /* 2 cards per row on medium screens */
+    }
+
+    .episodeSectionTitle {
+        font-size: 1.5rem; /* Maintain the same size */
+    }
+
+    .podcastEpisodeTitle {
+        font-size: 1.2rem; /* Smaller title for podcast cards */
+    }
+
+    .podcastEpisodeDescription {
+        font-size: 0.9rem; /* Smaller description for podcast cards */
+    }
+
+    .playButton, .loadMoreButton, .subscribeButton {
+        font-size: 0.9rem; /* Smaller button text on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .podcastCard {
+        width: 100%; /* Full width on small screens */
+        margin: 10px 0; /* Adjust margin */
+    }
+
+    .podcastTitle {
+        font-size: 1.8rem; /* Smaller title for very small screens */
+    }
+
+    .subscribeTitle {
+        font-size: 1.5rem; /* Smaller subscribe title */
+    }
+
+    .subscribeText {
+        font-size: 0.9rem; /* Smaller text for subscribe section */
+    }
+}

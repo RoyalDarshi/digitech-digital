@@ -1,9 +1,10 @@
 .news-header {
     text-align: center;
+    padding: 20px;
 }
 
 .news-header h1 {
-    font-size: 240%;
+    font-size: 200%; /* Reduced font size for better scaling */
     margin-bottom: 20px;
 }
 
@@ -11,12 +12,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 50px; /* Reduce gap for mobile */
+    flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
     width: 100%;
     background-color: #164e4d;
+    padding: 20px 0; /* Add some padding for better spacing */
 }
-.logos div{
-    width:200px;
+
+.logos div {
+    width: 150px; /* Reduced size for better scaling on smaller screens */
 }
 
 .logos img {
@@ -24,3 +28,31 @@
     height: auto;
 }
 
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .news-header h1 {
+        font-size: 180%; /* Smaller heading on mobile */
+    }
+
+    .logos {
+        gap: 30px; /* Further reduce gap between logos */
+    }
+
+    .logos div {
+        width: 100px; /* Smaller logo size on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .news-header h1 {
+        font-size: 150%; /* Further reduced font size */
+    }
+
+    .logos {
+        gap: 20px; /* Smaller gap on very small screens */
+    }
+
+    .logos div {
+        width: 80px; /* Smaller logo size */
+    }
+}

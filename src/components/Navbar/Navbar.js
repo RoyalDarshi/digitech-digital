@@ -83,7 +83,7 @@ const Navbar = () => {
         { path: '/podcast', label: 'Podcast' },
         { path: '/videos', label: 'Videos' },
         { path: '/trainee-reviews', label: 'Trainee Reviews' },
-        { path: '/placements', label: 'Placements' },
+        { path: '/placement', label: 'Placements' },
         { path: '/media-coverage', label: 'Media Coverage' },
         { path: '/batch-images', label: 'Batch Images' },
         { path: '/careers', label: 'Careers' },
@@ -208,7 +208,7 @@ const Navbar = () => {
                 <img src={logo} alt="Digitech Digital" className="navbar-logo-image" />
             </div>
             <nav className="navbar-links">
-                <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>
+                <Link to="/" className={`nav-link`}>
                     Home
                 </Link>
                 <Dropdown title="About Us" items={aboutItems} />
