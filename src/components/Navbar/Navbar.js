@@ -98,8 +98,8 @@ const Navbar = () => {
                 { path: '/special-course', label: 'Specialist Course (3 Months+)' },
                 { path: '/digital-master-course', label: 'Master Course (4.5 Months+)' },
                 { path: '/digital-advance-course', label: 'Professional Course (6 Months)' },
-                { path: '/annual-digital-course', label: 'Digi Hero (1 Year)' },
-                { path: '/ninja-kids', label: 'Digital Ninja (Kids)' },
+                { path: '/annual-digital-course', label: 'Digi Annum (1 Year)' },
+                { path: '/ninja-kids', label: 'Digi kiddo (Kids)' },
             ],
         },
         {

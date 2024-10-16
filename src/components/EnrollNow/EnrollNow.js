@@ -79,9 +79,9 @@ const EnrollNowModal = ({ isOpen, onClose ,course}) => {
                             <option value="Digital Marketing Specialist Course">Specialist Course (3 Months+)</option>
                             <option value="Advanced Digital Marketing Course">Professional Course (6 Months)</option>
                             <option value={"Digital Marketing Foundation Course"}>Foundation Course (2 Month)</option>
-                            <option value="Ninja Kids">Ninja Kids</option>
+                            <option value="Ninja Kids">Digi kiddo</option>
                             <option value={"Digital Marketing Master Course "}>Master Course(4.5 Months+)</option>
-                            <option value="Annual Digital Marketing Program">Digi Hero (1 Year)</option>
+                            <option value="Annual Digital Marketing Program">Digi Annum (1 Year)</option>
                         </select>
 
                         <button type="submit" className={styles.submitButton}>
