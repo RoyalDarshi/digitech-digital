@@ -7,13 +7,13 @@ const NinjaKids = () => {
     return (
         <div className={styles.container}>
             <header className={styles.header}>
-                <h1>Ninja Kids Digital Marketing Program</h1>
+                <h1>Digi kiddo Digital Marketing Program</h1>
                 <p>A fun and engaging way for kids to learn digital marketing!</p>
             </header>
 
             <section className={styles.overview}>
                 <h2>Program Overview</h2>
-                <p>The Ninja Kids Digital Marketing Program is designed for children aged 8-14. This program introduces young learners to the exciting world of digital marketing through interactive sessions, hands-on projects, and creative activities.</p>
+                <p>The Digi kiddo Digital Marketing Program is designed for children aged 8-14. This program introduces young learners to the exciting world of digital marketing through interactive sessions, hands-on projects, and creative activities.</p>
             </section>
 
             <section className={styles.objectives}>
@@ -65,7 +65,7 @@ const NinjaKids = () => {
             <section className={styles.enrollment}>
                 <h2>Enroll Now!</h2>
                 <p>Don’t miss out on this exciting opportunity for your kids to learn digital marketing. Click below to
-                    enroll in the Ninja Kids Digital Marketing Program!</p>
+                    enroll in the Digi kiddo Digital Marketing Program!</p>
                 <button onClick={() => setModalOpen(true)} className={styles.enrollButton}>Enroll Now</button>
                 <EnrollNowModal isOpen={isModalOpen} onClose={() => setModalOpen(false)}
                                 course={"Ninja Kids"}/>

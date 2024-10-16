@@ -7,13 +7,13 @@ const AnnualDigitalMarketingProgram = () => {
     return (
         <div className={styles.container}>
             <header className={styles.header}>
-                <h1>Annual Digital Marketing Program</h1>
+                <h1>Digi Annum Marketing Program</h1>
                 <p>Your comprehensive guide to mastering digital marketing over a year!</p>
             </header>
 
             <section className={styles.overview}>
                 <h2>Course Overview</h2>
-                <p>This Annual Digital Marketing Program is designed for individuals who want to gain in-depth knowledge and practical experience in digital marketing. Over the course of one year, you'll learn essential skills that will prepare you for a successful career in the digital space.</p>
+                <p>This Digi Annum Marketing Program is designed for individuals who want to gain in-depth knowledge and practical experience in digital marketing. Over the course of one year, you'll learn essential skills that will prepare you for a successful career in the digital space.</p>
             </section>
 
             <section className={styles.objectives}>
@@ -68,7 +68,7 @@ const AnnualDigitalMarketingProgram = () => {
 
             <section className={styles.duration}>
                 <h2>Course Duration</h2>
-                <p>The Annual Digital Marketing Program is structured over 12 months, including:</p>
+                <p>The Digi Annum Marketing Program is structured over 12 months, including:</p>
                 <ul>
                     <li>Weekly live sessions and interactive workshops.</li>
                     <li>Access to an online learning platform with resources.</li>
@@ -79,7 +79,7 @@ const AnnualDigitalMarketingProgram = () => {
             <section className={styles.enrollment}>
                 <h2>Enroll Now!</h2>
                 <p>Don’t miss out on this opportunity to master digital marketing. Click below to enroll in the Annual
-                    Digital Marketing Program!</p>
+                    Digi Annum Program!</p>
                 <button onClick={() => setModalOpen(true)} className={styles.enrollButton}>Enroll Now</button>
                 <EnrollNowModal isOpen={isModalOpen} onClose={() => setModalOpen(false)}
                                 course={"Annual Digital Marketing Program"}/>
